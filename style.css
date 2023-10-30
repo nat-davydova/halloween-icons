@@ -90,8 +90,14 @@ body a {
 /* ICON STYLES: YOU DON'T NEED THEM!!! */
 
 .icon {
-    width: 200px;
-    height: 200px;
+    /* KEEP IT SQUARE */
+    --icon-dimensions: 200px;
+
+    width: var(--icon-dimensions);
+    height: var(--icon-dimensions);
+}
+
+.icon--bordered {
     border: 2px solid orange;
 }
 
@@ -106,6 +112,8 @@ body a {
     --eyes-color: #802f34;
     --brows-color: #d25627;
     --nose-color: #802f34;
+    --mouth-color: #802f34;
+    --teeth-color: var(--body-color--light);
 
     position: relative;
 }
@@ -116,23 +124,23 @@ body a {
     left: 50%;
     width: 15%;
     height: var(--tail-height);
-    transform: translateX(-50%);
+    transform: translateX(-50%) rotate(-33deg);
     background-color: var(--tail-color);
-    border-radius: 100px;
+    border-radius: 100% 0% 100% 60% / 100% 0% 100% 0%;
 }
 
 .pumpkin__main {
     position: relative;
-    top: 25%;
-    height: 75%;
+    top: 22%;
+    height: 78%;
 }
 
 .pumpkin__bleak {
     position: absolute;
     left: 33%;
     top: 13%;
-    height: 23%;
-    width: 23%;
+    height: 20%;
+    width: 20%;
     transform: rotate(-56deg);
     border: 6px solid transparent;
     border-top-color: var(--bleak-color);
@@ -142,16 +150,16 @@ body a {
 
 .pumpkin__face {
     position: absolute;
-    top: 34%;
+    top: 30%;
     left: 50%;
     width: 62%;
-    height: 46%;
+    height: 56%;
     transform: translateX(-50%);
     z-index: 4;
 }
 
 .pumpkin__eyes-nose {
-    height: 40;
+    height: 40%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -196,19 +204,43 @@ body a {
 }
 
 .pumpkin__nose {
-    width: 20%;
-    height: 65%;
-    overflow: hidden;
+    width: 12%;
+    height: 44%;
+    border-radius: 100% 100% 100% 100% / 100% 0% 100% 100%;
+    background-color: var(--nose-color);
+    transform: rotate(-46deg);
 }
 
-.pumpkin__nose:before {
+.pumpkin__mouth {
+    --teeth-offset: 15%;
+
+    position: relative;
+    top: 15%;
+    height: 45%;
+    width: 50%;
+    margin: auto;
+    background-color: var(--mouth-color);
+    border-radius: 96% 0% 51% 49% / 0% 0% 100% 100%
+}
+
+.pumpkin__mouth:before,
+.pumpkin__mouth:after {
+    position: absolute;
+    top: 0;
+    width: 15%;
+    height: 20%;
     display: block;
-    width: 100%;
-    height: 100%;
     content: '';
-    transform: rotate(45deg) translate(40%, 26%);
-    background-color: var(--nose-color);
-    border-radius: 4px;
+    background-color: var(--teeth-color);
+    border-radius: 0 0 50px 50px;
+}
+
+.pumpkin__mouth:before {
+    left: var(--teeth-offset);
+}
+
+.pumpkin__mouth:after {
+    right: var(--teeth-offset);
 }
 
 .pumpkin__body {
@@ -225,7 +257,7 @@ body a {
     height: 100%;
     content: '';
     background-color: var(--body-color--main);
-    border-radius: 100px;
+    border-radius: 50%;
     z-index: 1;
 }
 
