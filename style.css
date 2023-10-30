@@ -107,19 +107,6 @@ body a {
     position: relative;
 }
 
-.pumpkin__bleak {
-    position: absolute;
-    left: 33%;
-    top: 13%;
-    height: 23%;
-    width: 23%;
-    transform: rotate(-56deg);
-    border: 6px solid transparent;
-    border-top-color: var(--bleak-color);
-    border-radius: 100px;
-    z-index: 3;
-}
-
 .pumpkin__tail {
     position: absolute;
     top: 8%;
@@ -135,6 +122,28 @@ body a {
     position: relative;
     top: 25%;
     height: 75%;
+}
+
+.pumpkin__bleak {
+    position: absolute;
+    left: 33%;
+    top: 13%;
+    height: 23%;
+    width: 23%;
+    transform: rotate(-56deg);
+    border: 6px solid transparent;
+    border-top-color: var(--bleak-color);
+    border-radius: 100px;
+    z-index: 3;
+}
+
+.pumpkin__face {
+    position: absolute;
+    top: 34%;
+    left: 50%;
+    width: 62%;
+    height: 46%;
+    transform: translateX(-50%);
 }
 
 .pumpkin__body {
