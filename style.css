@@ -101,7 +101,7 @@ body a {
     border: 2px solid orange;
 }
 
-/* ICON  #1 */
+/* PUMPKIN ICON */
 
 .pumpkin {
     --body-color--main: #e57e25;
@@ -278,4 +278,43 @@ body a {
     background-color: var(--body-color--light);
     border-radius: 50%;
     z-index: 2;
+}
+
+/* GRAVE ICON */
+.grave {
+    --grave-color: #35495E;
+    --grave--shadow-color: #2C3E50;
+
+    position: relative;
+}
+
+.grave__body {
+    --shadow-offset: 18%;
+
+    position: relative;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    border-radius: 50% 50% 0 0;
+    background-color: var(--grave-color);
+}
+
+.grave__body:before,
+.grave__body:after {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 5%;
+    height: 15%;
+    content: '';
+    border-radius: 30px 30px 0 0;
+    background-color: var(--grave--shadow-color);
+}
+
+.grave__body:before {
+    left: var(--shadow-offset);
+}
+
+.grave__body:after {
+    right: var(--shadow-offset);
 }
