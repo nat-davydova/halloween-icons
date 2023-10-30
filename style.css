@@ -102,15 +102,29 @@ body a {
     --body-color--light: #F29C1F;
     --tail-color: #24AE5F;
     --tail-height: 30%;
+    --bleak-color: #FAC176;
 
     position: relative;
+}
+
+.pumpkin__bleak {
+    position: absolute;
+    left: 33%;
+    top: 13%;
+    height: 23%;
+    width: 23%;
+    transform: rotate(-56deg);
+    border: 6px solid transparent;
+    border-top-color: var(--bleak-color);
+    border-radius: 100px;
+    z-index: 3;
 }
 
 .pumpkin__tail {
     position: absolute;
     top: 8%;
     left: 50%;
-    width: 17%;
+    width: 15%;
     height: var(--tail-height);
     transform: translateX(-50%);
     background-color: var(--tail-color);
