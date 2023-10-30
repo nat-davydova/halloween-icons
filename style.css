@@ -402,3 +402,36 @@ body a {
 .skull__face:after {
     right: 0;
 }
+
+.skull__nose {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    width: 25%;
+    height: 45%;
+    transform: translateX(-50%) rotate(180deg)}
+
+.skull__nose:before,
+.skull__nose:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 80%;
+    height: 40%;
+    content: '';
+    background-color: var(--grave-color);
+    border-radius: 30%;
+}
+
+.skull__nose:before {
+    transform: rotate(-45deg);
+    transform-origin: top right;
+    left: -1px
+}
+
+.skull__nose:after {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    left: 1px
+}
