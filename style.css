@@ -87,8 +87,52 @@ body a {
     justify-content: center;
 }
 
+/* ICON STYLES: YOU DON'T NEED THEM!!! */
+
 .icon {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
     border: 2px solid orange;
+}
+
+/* ICON  #1 */
+
+.pumpkin {
+    --body-color--main: #e57e25;
+
+    position: relative;
+}
+
+.pumpkin__tail {
+    height: 25%;
+}
+
+.pumpkin__main {
+    position: relative;
+    height: 75%;
+}
+
+.pumpkin__body {
+    position: relative;
+    height: 100%;
+}
+
+.pumpkin__body:before,
+.pumpkin__body:after {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 55%;
+    height: 100%;
+    content: '';
+    background-color: var(--body-color--main);
+    border-radius: 100px;
+}
+
+.pumpkin__body:before {
+    left: 0;
+}
+
+.pumpkin__body:after {
+    right: 0;
 }
