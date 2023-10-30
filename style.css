@@ -318,3 +318,14 @@ body a {
 .grave__body:after {
     right: var(--shadow-offset);
 }
+
+.skull-shadow {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 80%;
+    height: 75%;
+    transform: translateX(-50%);
+    background-color: var(--grave--shadow-color);
+    border-radius: 50% 50% 35% 35%;
+}
