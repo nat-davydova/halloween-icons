@@ -103,6 +103,8 @@ body a {
     --tail-color: #24AE5F;
     --tail-height: 30%;
     --bleak-color: #FAC176;
+    --eyes-color: #802f34;
+    --brows-color: #d25627;
 
     position: relative;
 }
@@ -144,6 +146,44 @@ body a {
     width: 62%;
     height: 46%;
     transform: translateX(-50%);
+    z-index: 4;
+}
+
+.pumpkin__eyes-nose {
+    height: 39%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pumpkin__eye {
+    position: relative;
+    width: 24%;
+    height: 100%;
+}
+
+.pumpkin__eye:before {
+    position: absolute;
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 20%;
+    content: '';
+    background-color: var(--brows-color);
+    z-index: 5;
+    border-radius: 50px;
+}
+
+.pumpkin__eye:after {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    display: block;
+    width: 80%;
+    height: 100%;
+    transform: translateX(-50%);
+    content: '';
+    background-color: var(--eyes-color);
+    border-radius: 50%;
 }
 
 .pumpkin__body {
