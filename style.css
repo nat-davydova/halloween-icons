@@ -344,7 +344,7 @@ body a {
     top: 10%;
     left: 50%;
     width: 80%;
-    height: 80%;
+    height: 86%;
     transform: translateX(-50%);
 }
 
@@ -358,4 +358,29 @@ body a {
     content: '';
     background-color: var(--skull-color);
     border-radius: 50% 50% 35% 35%;
+}
+
+.skull:after {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    display: block;
+    width: 60%;
+    height: 25%;
+    content: '';
+    transform: translateX(-50%);
+    background-image: radial-gradient(circle closest-side, var(--skull-color) 100%, rgba(255,255,255,0) 0);
+    background-size: 33.33% 100%;
+    background-repeat: repeat-x;
+}
+
+.skull__face {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    width: 70%;
+    height: 25%;
+    transform: translateX(-50%);
+    background: rebeccapurple;
+
 }
