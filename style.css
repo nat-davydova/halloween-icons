@@ -100,16 +100,26 @@ body a {
 .pumpkin {
     --body-color--main: #e57e25;
     --body-color--light: #F29C1F;
+    --tail-color: #24AE5F;
+    --tail-height: 30%;
 
     position: relative;
 }
 
 .pumpkin__tail {
-    height: 25%;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    width: 17%;
+    height: var(--tail-height);
+    transform: translateX(-50%);
+    background-color: var(--tail-color);
+    border-radius: 100px;
 }
 
 .pumpkin__main {
     position: relative;
+    top: 25%;
     height: 75%;
 }
 
@@ -146,6 +156,6 @@ body a {
     height: 100%;
     transform: translateX(-50%);
     background-color: var(--body-color--light);
-    border-radius: 100px;
+    border-radius: 50%;
     z-index: 2;
 }
