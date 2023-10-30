@@ -284,6 +284,7 @@ body a {
 .grave {
     --grave-color: #35495E;
     --grave--shadow-color: #2C3E50;
+    --skull-color: #ECF0F1;
 
     position: relative;
 }
@@ -319,13 +320,42 @@ body a {
     right: var(--shadow-offset);
 }
 
-.skull-shadow {
+.skull-wrapper {
     position: absolute;
     top: 5%;
     left: 50%;
     width: 80%;
     height: 75%;
     transform: translateX(-50%);
+}
+
+.skull-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: var(--grave--shadow-color);
+    border-radius: 50% 50% 35% 35%;
+}
+
+.skull {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    width: 80%;
+    height: 80%;
+    transform: translateX(-50%);
+}
+
+.skull:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 80%;
+    content: '';
+    background-color: var(--skull-color);
     border-radius: 50% 50% 35% 35%;
 }
