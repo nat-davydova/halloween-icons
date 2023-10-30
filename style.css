@@ -99,6 +99,7 @@ body a {
 
 .pumpkin {
     --body-color--main: #e57e25;
+    --body-color--light: #F29C1F;
 
     position: relative;
 }
@@ -127,6 +128,7 @@ body a {
     content: '';
     background-color: var(--body-color--main);
     border-radius: 100px;
+    z-index: 1;
 }
 
 .pumpkin__body:before {
@@ -135,4 +137,15 @@ body a {
 
 .pumpkin__body:after {
     right: 0;
+}
+
+.pumpkin__body-inner {
+    position: absolute;
+    left: 50%;
+    width: 49%;
+    height: 100%;
+    transform: translateX(-50%);
+    background-color: var(--body-color--light);
+    border-radius: 100px;
+    z-index: 2;
 }
