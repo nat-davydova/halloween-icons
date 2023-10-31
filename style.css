@@ -442,6 +442,7 @@ body a {
     --candy-main-dimensions: 60%;
     --candy-main-color: #FB7B76;
     --candy-dots-color: #F3D55B;
+    --candy-paper-color: #FF5364;
 
     position: relative;
 }
@@ -480,4 +481,56 @@ body a {
     background-repeat: no-repeat;
     background-color: var(--candy-main-color);
     border-radius: 50%;
+    z-index: 3;
+}
+
+.candy__paper {
+    --paper-dimensions: 40%;
+    --paper-waves-width: 30%;
+
+    position: absolute;
+    width: var(--paper-dimensions);
+    height: var(--paper-dimensions);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.candy__paper:before {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    background-color: var(--candy-paper-color);
+    z-index: 2;
+}
+
+/*.candy__paper:after {*/
+/*    position: absolute;*/
+/*    top: 97%;*/
+/*    left: 1.5%;*/
+/*    display: block;*/
+/*    !* height and width used vice-versa because of rotation *!*/
+/*    height: var(--paper-waves-width);*/
+/*    width: 97%;*/
+/*    content: '';*/
+/*    background-image: radial-gradient(circle closest-side, var(--candy-paper-color) 100%, rgba(255,255,255,0) 0);*/
+/*    background-size: 33.33% 100%;*/
+/*    background-repeat: repeat-x;*/
+/*}*/
+
+.candy__paper--left {
+    left: 10%;
+}
+
+.candy__paper--left:before {
+    transform: rotate(90deg);;
+}
+
+.candy__paper--right {
+    right: 10%;
+}
+
+.candy__paper--right:before {
+    transform: rotate(-90deg);
 }
