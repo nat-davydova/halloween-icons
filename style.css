@@ -435,3 +435,23 @@ body a {
     transform-origin: top left;
     left: 1px
 }
+
+/* CANDY ICON */
+
+.candy {
+    --candy-main-dimensions: 60%;
+    --candy-main-color: #FB7B76;
+
+    position: relative;
+}
+
+.candy__main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    transform: translate(-50%, -50%);
+    background-color: var(--candy-main-color);
+    border-radius: 50%;
+}
