@@ -441,6 +441,7 @@ body a {
 .candy {
     --candy-main-dimensions: 60%;
     --candy-main-color: #FB7B76;
+    --candy-dots-color: #F3D55B;
 
     position: relative;
 }
@@ -452,6 +453,31 @@ body a {
     width: 60%;
     height: 60%;
     transform: translate(-50%, -50%);
+    background-image:
+            radial-gradient(circle closest-side, var(--candy-dots-color) 100%, rgba(255,255,255,0) 0),
+            radial-gradient(circle closest-side, var(--candy-dots-color) 100%, rgba(255,255,255,0) 0),
+            radial-gradient(circle closest-side, var(--candy-dots-color) 100%, rgba(255,255,255,0) 0),
+            radial-gradient(circle closest-side, var(--candy-dots-color) 100%, rgba(255,255,255,0) 0),
+            radial-gradient(circle closest-side, var(--candy-dots-color) 100%, rgba(255,255,255,0) 0),
+            radial-gradient(circle closest-side, var(--candy-dots-color) 100%, rgba(255,255,255,0) 0),
+            radial-gradient(circle closest-side, var(--candy-dots-color) 100%, rgba(255,255,255,0) 0);
+    background-size:
+            18% 18%,
+            13% 13%,
+            18% 18%,
+            13% 13%,
+            18% 18%,
+            18% 18%,
+            13% 13%;
+    background-position:
+            35% 17%,
+            75% 23%,
+            17% 51%,
+            52% 53%,
+            88% 62%,
+            35% 89%,
+            66% 83%;
+    background-repeat: no-repeat;
     background-color: var(--candy-main-color);
     border-radius: 50%;
 }
