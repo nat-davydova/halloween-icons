@@ -544,6 +544,8 @@ body a {
 }
 
 .candy__paper-shade {
+    --candy-paper-shade-rotate-angle: 21deg;
+
     position: absolute;
     width: 40%;
     height: 7%;
@@ -573,17 +575,17 @@ body a {
 }
 
 .candy__paper--left .candy__paper-shade:nth-child(1) {
-    transform: rotate(21deg);
+    transform: rotate(var(--candy-paper-shade-rotate-angle));
 }
 
 .candy__paper--left .candy__paper-shade:nth-child(3) {
-    transform: rotate(-21deg);
+    transform: rotate(calc(var(--candy-paper-shade-rotate-angle) * -1));
 }
 
 .candy__paper--right .candy__paper-shade:nth-child(1) {
-    transform: rotate(-21deg);
+    transform: rotate(calc(var(--candy-paper-shade-rotate-angle) * -1));
 }
 
 .candy__paper--right .candy__paper-shade:nth-child(3) {
-    transform: rotate(21deg);
+    transform: rotate(var(--candy-paper-shade-rotate-angle));
 }
