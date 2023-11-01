@@ -596,13 +596,104 @@ body a {
     --cauldron-color: #3F5C6C;
     --cauldron-shadow-color: #314152;
     --cauldron-bleak-color: #547580;
+    --cauldron-brew-color: #4FBA6F;
 
     position: relative;
 }
 
 .cauldron__brew {
     position: absolute;
-    height: 24%;
+    top: 0;
+    left: 50%;
+    width: 90%;
+    height: 26%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.cauldron__brew:before,
+.cauldron__brew:after {
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: var(--cauldron-brew-color);
+    border-radius: 50px;
+}
+
+.cauldron__brew:before {
+    top: 12%;
+    left: 43%;
+    width: 11%;
+    height: 38%;
+}
+
+.cauldron__brew:after {
+    top: 41%;
+    right: 10%;
+    width: 18%;
+    height: 49%;
+}
+
+.cauldron__brew-left {
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 35%;
+    height: 40%;
+}
+
+.cauldron__brew-left:before,
+.cauldron__brew-left:after {
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: var(--cauldron-brew-color);
+    border-radius: 50px;
+}
+
+.cauldron__brew-left:before {
+    top: -74%;
+    left: 17%;
+    width: 62%;
+    height: 190%;
+}
+
+.cauldron__brew-left:after {
+    width: 100%;
+    height: 100%;
+}
+
+.cauldron__brew-right {
+    position: absolute;
+    right: 5%;
+    bottom: -10%;
+    width: 35%;
+    height: 40%;
+    background-color: var(--cauldron-brew-color);
+    border-radius: 50px;
+}
+
+.cauldron__brew-right:before {
+    top: 0;
+    left: 17%;
+    width: 30%;
+    height: 320%;
+}
+
+.cauldron__brew-right:after {
+    top: 0;
+    right: 17%;
+    width: 20%;
+    height: 220%;
+}
+
+.cauldron__brew-right:before,
+.cauldron__brew-right:after {
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: var(--cauldron-brew-color);
+    border-radius: 50px;
 }
 
 .cauldron__main {
