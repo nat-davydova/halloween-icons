@@ -609,10 +609,10 @@ body a {
     --cauldron-cut-out-percentage: 20%;
 
     position: absolute;
-    top: 6%;
+    top: 10%;
     left: 50%;
-    height: 94%;
-    width: 94%;
+    height: 90%;
+    width: 90%;
     transform: translateX(-50%);
 }
 
