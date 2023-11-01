@@ -595,6 +595,7 @@ body a {
 .cauldron {
     --cauldron-color: #3F5C6C;
     --cauldron-shadow-color: #314152;
+    --cauldron-bleak-color: #547580;
 
     position: relative;
 }
@@ -659,4 +660,18 @@ body a {
     background-color: var(--cauldron-shadow-color);
     border-radius: 50px;
     z-index: 3;
+}
+
+.cauldron__bleak {
+    --cauldron-bleak-width: 12px;
+
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 20%;
+    height: 40%;
+    border: var(--cauldron-bleak-width) solid transparent;
+    border-left-color: var(--cauldron-bleak-color);
+    border-radius: 50%;
+    z-index: 4;
 }
