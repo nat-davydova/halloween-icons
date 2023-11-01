@@ -594,6 +594,7 @@ body a {
 
 .cauldron {
     --cauldron-color: #3F5C6C;
+    --cauldron-shadow-color: #314152;
 
     position: relative;
 }
@@ -612,7 +613,50 @@ body a {
     height: 94%;
     width: 94%;
     transform: translateX(-50%);
+}
+
+.cauldron__inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-color: var(--cauldron-color);
     border-radius: 50%;
     clip-path: polygon(0 100%, 100% 100%, 100% var(--cauldron-cut-out-percentage), 0% var(--cauldron-cut-out-percentage));
+    z-index: 1;
+}
+
+.cauldron__main:before,
+.cauldron__main:after {
+    --cauldron-legs-x-offset: 15%;
+
+    position: absolute;
+    bottom: 0;
+    display: block;
+    content: '';
+    width: 15%;
+    height: 25%;
+    background-color: var(--cauldron-shadow-color);
+    border-radius: 50px;
+    z-index: -1;
+}
+
+.cauldron__main:before {
+    left: var( --cauldron-legs-x-offset);
+    transform: rotate(45deg);
+}
+
+.cauldron__main:after {
+    right: var( --cauldron-legs-x-offset);
+    transform: rotate(-45deg);
+}
+
+.cauldron__top {
+    position: absolute;
+    left: 0;
+    top: calc(var(--cauldron-cut-out-percentage) / 1.2);
+    width: 100%;
+    height: 10%;
+    background-color: var(--cauldron-shadow-color);
+    border-radius: 50px;
+    z-index: 3;
 }
