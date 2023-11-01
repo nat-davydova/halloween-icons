@@ -589,3 +589,30 @@ body a {
 .candy__paper--right .candy__paper-shade:nth-child(3) {
     transform: rotate(var(--candy-paper-shade-rotate-angle));
 }
+
+/* CAULDRON ICON */
+
+.cauldron {
+    --cauldron-color: #3F5C6C;
+
+    position: relative;
+}
+
+.cauldron__brew {
+    position: absolute;
+    height: 24%;
+}
+
+.cauldron__main {
+    --cauldron-cut-out-percentage: 20%;
+
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    height: 94%;
+    width: 94%;
+    transform: translateX(-50%);
+    background-color: var(--cauldron-color);
+    border-radius: 50%;
+    clip-path: polygon(0 100%, 100% 100%, 100% var(--cauldron-cut-out-percentage), 0% var(--cauldron-cut-out-percentage));
+}
