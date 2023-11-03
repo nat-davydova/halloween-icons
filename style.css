@@ -775,6 +775,7 @@ body a {
     --bat-eyes-color: #484758;
     --bat-nose-color: #FFB2C1;
     --bat-nostrils-color: #484758;
+    --bat-cheecks-color: #FF889E;
 
     position: relative;
 }
@@ -817,6 +818,44 @@ body a {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.bat__eye {
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+
+.bat__eye:before {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 50%;
+    height: 60%;
+    content: '';
+    background-color: var(--bat-eyes-color);
+    border-radius: 50%;
+}
+
+.bat__eye:after {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 30%;
+    content: '';
+    background-color: var(--bat-cheecks-color);
+    border-radius: 50%;
+}
+
+.bat__eye--left:before,
+.bat__eye--left:after {
+    right: 0;
+}
+
+.bat__eye--right:before,
+.bat__eye--right:after {
+    left: 0;
 }
 
 .bat__nose {
