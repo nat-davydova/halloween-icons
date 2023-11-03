@@ -774,6 +774,7 @@ body a {
     --bat-head-shadow-color: #484758;
     --bat-eyes-color: #484758;
     --bat-nose-color: #FFB2C1;
+    --bat-nostrils-color: #484758;
 
     position: relative;
 }
@@ -819,10 +820,33 @@ body a {
 }
 
 .bat__nose {
+    position: relative;
     width: 30%;
     height: 100%;
     background-color: var(--bat-nose-color);
     border-radius: 50% 50% 32% 31% / 60% 63% 36% 38%;
+}
+
+.bat__nose:before,
+.bat__nose:after {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 30%;
+    height: 60%;
+    content: '';
+    background-color: var(--bat-nostrils-color);
+    border-radius: 50%;
+}
+
+.bat__nose:before {
+    left: 13%;
+    transform: translateY(-50%) rotate(20deg);
+}
+
+.bat__nose:after {
+    right: 13%;
+    transform: translateY(-50%) rotate(-20deg);
 }
 
 .bat__mouth {
