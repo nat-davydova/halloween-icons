@@ -766,3 +766,35 @@ body a {
     border-radius: 50%;
     z-index: 4;
 }
+
+/* BAT ICON */
+
+.bat {
+    --bat-head-color: #6A647F;
+    --bat-head-shadow-color: #5C586F;
+
+    position: relative;
+}
+
+.bat__head {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 90%;
+    height: 80%;
+    transform: translateX(-50%);
+    background-color: var(--bat-head-shadow-color);
+    border-radius: 50% 50% 32% 31% / 60% 63% 36% 38%;
+}
+
+.bat__head:before {
+    position: absolute;
+    top: 0;
+    left: 7%;
+    display: block;
+    width: 93%;
+    height: 100%;
+    content: '';
+    background-color: var(--bat-head-color);
+    border-radius: inherit;
+}
